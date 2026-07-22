@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+.env
+.env.*
+*.log
+.DS_Store
+
+# Frontend is its own repo — do not track it here
+ui-code/
