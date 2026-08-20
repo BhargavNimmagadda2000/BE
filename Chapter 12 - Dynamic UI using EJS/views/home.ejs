@@ -1,0 +1,25 @@
+<%- include('partials/head') %>
+  </head>
+  <body>
+    <%- include('partials/nav') %>
+    <main class="container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 max-w-2xl">
+      <h2 class="text-3xl text-red-500 font-bold text-center mb-6">Here are our registered homes:</h2>
+      <% registeredHomes.forEach(home => { %>
+        <section class="bg-white rounded-lg p-6 mb-8 shadow-md">
+          <% if (home.photoUrl) { %>
+            <img src="<%= home.photoUrl %>" alt="<%= home.houseName %>" class="w-full h-80 object-cover rounded-md mb-4">
+          <% } %>
+          <h3 class="text-xl font-bold text-center mb-1"><%= home.houseName %></h3>
+          <p class="text-center text-gray-600 mb-2"><%= home.location %></p>
+          <p class="text-center text-red-500 font-bold">Rs<%= home.price %> / night</p>
+          <div class="text-center text-gray-700 mt-3">
+            <div class="flex items-center justify-center gap-2">
+              <img src="/icons/star.svg" alt="star" width="20" height="20" class="inline-block align-middle mr-1">
+              <span class="font-semibold"><%= home.rating %></span>
+            </div>
+          </div>
+        </section>
+      <% }) %>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+[
+    {
+        "houseName": "MyHome1",
+        "location": "Hyderabad",
+        "price": "5000",
+        "rating": "5",
+        "photoUrl": "https://www.zhcustomhomes.com/wp-content/uploads/2025/01/Modern-Luxury-Hill-Top-stacked-stone-entryway-white-stucco-Zbranek-and-Holt-Custom-Homes.jpg"
+    },
+    {
+        "houseName": "MyHome2",
+        "location": "Bangalore",
+        "price": "4000",
+        "rating": "4",
+        "photoUrl": "https://www.zhcustomhomes.com/wp-content/uploads/2025/01/Modern-Luxury-Hill-Top-stacked-stone-entryway-white-stucco-Zbranek-and-Holt-Custom-Homes.jpg"
+    },
+    {
+        "houseName": "MyHome3",
+        "location": "Delhi",
+        "price": "6000",
+        "rating": "4",
+        "photoUrl": "https://www.zhcustomhomes.com/wp-content/uploads/2025/01/Modern-Luxury-Hill-Top-stacked-stone-entryway-white-stucco-Zbranek-and-Holt-Custom-Homes.jpg"
+    }
+]
