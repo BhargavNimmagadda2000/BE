@@ -2,7 +2,7 @@ const mongodb = require('mongodb');
 
 const MongoCLient = mongodb.MongoClient;
 
-const mongoUrl = "mongodb+srv://bhargavnssd_db_user:E6xmqAcx2Mg2e7xx@clusternodejs.isxzzqw.mongodb.net/?appName=ClusterNodeJS";
+const mongoUrl = "momgoURL";
 
 let _db;
 
