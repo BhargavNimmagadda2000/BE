@@ -26,7 +26,7 @@ app.use(errorsController.pageNotFound);
 
 const PORT = 3111;
 
-const MONGO_URL = "mongodb+srv://bhargavnssd_db_user:E6xmqAcx2Mg2e7xx@clusternodejs.isxzzqw.mongodb.net/airbnb?retryWrites=true&w=majority&appName=ClusterNodeJS";
+const MONGO_URL = "";
 
 mongoose.connect(MONGO_URL).then(() => {
   console.log("Connected to MongoDB");
