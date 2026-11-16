@@ -1,0 +1,36 @@
+<%- include('../partials/head') %>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <%- include('../partials/nav') %>
+        <main class="container mx-auto px-4 py-10 max-w-4xl">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <img src="<%= home.photoUrl %>" alt="<%= home.houseName %>" class="w-full h-80 object-cover bg-gray-200">
+                <div class="p-8">
+                    <div class="flex flex-wrap justify-between items-start gap-3 mb-3">
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-800">
+                                <%= home.houseName %>
+                            </h2>
+                            <p class="text-gray-500 mt-1">
+                                <%= home.location %>
+                            </p>
+                        </div>
+                        <div class="flex items-center bg-gray-50 px-3 py-1.5 rounded-full">
+                            <img src="/icons/star.svg" alt="star" width="16" height="16" class="inline-block align-middle mr-1">
+                            <span class="text-gray-700 font-medium">
+                                <%= home.rating %>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-2xl font-bold text-red-500 mb-4">Rs<%= home.price %> <span class="text-base font-medium text-gray-500">/ night</span></p>
+                    <% if (home.description) { %>
+                    <p class="text-gray-600 leading-relaxed mb-6"><%= home.description %></p>
+                    <% } %>
+                    <div class="max-w-xs">
+                        <%- include('../partials/favourite', { home: home }) %>
+                    </div>
+                </div>
+            </div>
+        </main>
+  </body>
+</html>

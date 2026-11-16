@@ -1,0 +1,41 @@
+<%- include('../partials/head') %>
+  </head>
+  <body class="form-page">
+    <%- include('../partials/nav') %>
+    <main class="form-shell">
+      <div class="form-card">
+        <h1 class="form-title">Welcome back</h1>
+        <p class="form-subtitle">Login to continue to Airbnb</p>
+        <form action="/login" method="POST" class="space-y-5">
+          <div>
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              value=""
+              required
+              class="form-input"/>
+          </div>
+          <div>
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              value=""
+              required
+              class="form-input"/>
+          </div>
+          <input type="submit" value="Login" class="form-button" />
+        </form>
+        <p class="form-footer">
+          New to Airbnb?
+          <a href="/signup" class="text-red-500 font-medium hover:underline">Create an account</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

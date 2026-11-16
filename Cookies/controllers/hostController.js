@@ -5,6 +5,7 @@ exports.getAddHome = (req, res, next) => {
     pageTitle: "Add Home",
     currentPage: "addHome",
     editing: false,
+    isLoggedIn: req.isLoggedIn,
   });
 };
 
@@ -20,6 +21,7 @@ exports.getEditHome = (req, res, next) => {
       pageTitle: "Edit Home",
       currentPage: "editHome",
       editing: editing,
+      isLoggedIn: req.isLoggedIn,
     })
   }).catch(err => {
     console.error(err);
@@ -32,6 +34,7 @@ exports.getHostHomes = (req, res, next) => {
       registeredHomes: registeredHomes,
       pageTitle: "Host Homes List",
       currentPage: "host-homes",
+      isLoggedIn: req.isLoggedIn,
     })
   })
 };
@@ -47,6 +50,7 @@ exports.postAddHome = (req, res, next) => {
   res.render("host/home-added", {
     pageTitle: "Home Added Successfully",
     currentPage: "homeAdded",
+    isLoggedIn: req.isLoggedIn,
   });
 };
 

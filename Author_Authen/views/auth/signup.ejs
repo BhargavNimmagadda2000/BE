@@ -1,0 +1,116 @@
+<%- include('../partials/head') %>
+  </head>
+  <body class="form-page">
+    <%- include('../partials/nav') %>
+    <main class="form-shell">
+      <div class="form-card">
+        <h1 class="form-title">Create your account</h1>
+        <p class="form-subtitle">Join Airbnb to book stays or host your home</p>
+        <form action="/signup" method="POST" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="first_name" class="form-label">First name</label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="Jane"
+                value=""
+                required
+                class="form-input"/>
+            </div>
+            <div>
+              <label for="last_name" class="form-label">Last name</label>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder="Doe"
+                value=""
+                required
+                class="form-input"/>
+            </div>
+          </div>
+          <div>
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              value=""
+              required
+              class="form-input"/>
+          </div>
+          <div>
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              value=""
+              required
+              class="form-input"/>
+          </div>
+          <div>
+            <label for="confirm_password" class="form-label">Confirm password</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Repeat your password"
+              value=""
+              required
+              class="form-input"/>
+          </div>
+          <div>
+            <span class="form-label">User type</span>
+            <div class="flex gap-4">
+              <label for="user_type_guest" class="choice-card">
+                <input
+                  type="radio"
+                  id="user_type_guest"
+                  name="user_type"
+                  value="guest"
+                  required
+                  class="h-4 w-4 accent-red-500"
+                />
+                Guest
+              </label>
+              <label for="user_type_host" class="choice-card">
+                <input
+                  type="radio"
+                  id="user_type_host"
+                  name="user_type"
+                  value="host"
+                  required
+                  class="h-4 w-4 accent-red-500"
+                />
+                Host
+              </label>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="terms_and_conditions"
+              name="terms_and_conditions"
+              required
+              class="h-4 w-4 accent-red-500"
+            />
+            <label for="terms_and_conditions" class="cursor-pointer text-sm text-gray-700">
+              I agree to the
+              <a href="/terms-and-conditions" class="text-red-500 hover:underline">Terms and Conditions</a>
+            </label>
+          </div>
+          <input type="submit" value="Signup" class="form-button" />
+        </form>
+        <p class="form-footer">
+          Already have an account?
+          <a href="/login" class="text-red-500 font-medium hover:underline">Login</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
